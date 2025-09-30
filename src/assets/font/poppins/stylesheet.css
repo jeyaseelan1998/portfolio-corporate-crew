@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Black.eot');
+    src: url('Poppins-Black.eot?#iefix') format('embedded-opentype'),
+        url('Poppins-Black.woff2') format('woff2'),
+        url('Poppins-Black.woff') format('woff'),
+        url('Poppins-Black.ttf') format('truetype'),
+        url('Poppins-Black.svg#Poppins-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

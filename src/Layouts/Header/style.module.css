@@ -1,0 +1,102 @@
+.header {
+    color: var(--white);
+}
+
+.container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.darkLogo,
+.lightLogo {
+    width: 150px;
+}
+
+.darkLogo {
+    display: none;
+}
+
+.contactLinkWrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 30px;
+}
+
+.contactLinkWrap .icon {
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.contactLinkWrap .text p {
+    color: var(--primary);
+    font-size: 14px;
+    font-family: var(--cursive-font);
+}
+
+.contactLinkWrap .text a {
+    font-size: 18px;
+}
+
+.navigation {
+    margin-left: auto;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+}
+
+.menuItem {
+    padding: 8px 10px;
+    position: relative;
+}
+
+.menuItem i {
+    color: var(--primary);
+}
+
+.subMenuList {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(125%);
+    bottom: 0;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 16px 50px #00000070;
+    min-width: 240px;
+    z-index: 1;
+}
+
+.menuItem:hover .subMenuList {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(100%);
+    transition: all .3s;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.subMenuItem a {
+    color: var(--secondary);
+}
+
+@media (max-width: 992px) {
+    .contactLinkWrap {
+        display: none;
+    }
+}

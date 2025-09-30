@@ -1,0 +1,40 @@
+.center {
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 50px;
+}
+
+@media (max-width: 1400px) {
+    .center {
+        max-width: 1190px;
+        padding: 0 45px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .center {
+        max-width: 960px;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .center {
+        max-width: 720px;
+        padding: 0 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center {
+        max-width: 540px;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .center {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+}

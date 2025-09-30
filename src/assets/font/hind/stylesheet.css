@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Hind Madurai';
+    src: url('HindMadurai-Bold.eot');
+    src: url('HindMadurai-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HindMadurai-Bold.woff2') format('woff2'),
+        url('HindMadurai-Bold.woff') format('woff'),
+        url('HindMadurai-Bold.ttf') format('truetype'),
+        url('HindMadurai-Bold.svg#HindMadurai-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
