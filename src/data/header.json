@@ -20,11 +20,10 @@
         },
         {
             "label": "Pages",
-            "url": "/pages",
             "sub_menu": [
                 {
                     "label": "Team",
-                    "url": "/team"
+                    "url": "/pages/team"
                 }
             ]
         },

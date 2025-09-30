@@ -14,7 +14,7 @@ const Link = (props) => {
     }
 
     if (href) {
-        return <Anchor href={href} className={className} ariaLabel={ariaLabel} target={target} rel='noreferrer noopener'>{children}</Anchor>
+        return <Anchor to={href} className={className} ariaLabel={ariaLabel} target={target} rel='noreferrer noopener'>{children}</Anchor>
     }
 
     return (

@@ -72,13 +72,17 @@
     box-shadow: 0 16px 50px #00000070;
     min-width: 240px;
     z-index: 1;
+    transition: all .3s;
 }
 
 .menuItem:hover .subMenuList {
     opacity: 1;
     visibility: visible;
     transform: translateY(100%);
-    transition: all .3s;
+}
+
+.subMenuList li + li {
+    padding-top: 16px;
 }
 
 .navLink {
@@ -87,16 +91,59 @@
     gap: 4px;
 }
 
+.menuList .active,
+.subNavLink:hover,
 .navLink:hover {
     color: var(--primary);
 }
 
-.subMenuItem a {
+.subNavLink {
     color: var(--secondary);
+    min-width: 100px;
+}
+
+.subNavLink:hover {
+    transform: translateX(10px);
 }
 
 @media (max-width: 992px) {
     .contactLinkWrap {
         display: none;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .menuList {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        background: var(--white);
+    }
+
+    .menuList .menuItem .subMenuList {
+        box-shadow: none;
+        padding: 16px 0 0 16px;
+        position: relative;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    
+    .menuList .menuItem .subMenuList.open {
+        display: block;
+    }
+
+    .navLink {
+        color: var(--secondary);
     }
 }

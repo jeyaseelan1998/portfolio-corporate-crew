@@ -41,11 +41,17 @@ button {
   cursor: pointer;
   background-color: transparent;
   transition: all 0.25s;
+  display: inline-block;
 }
 
 a {
   text-decoration: none;
+}
+
+a,
+button {
   color: var(--default-text);
+  font-size: 16px;
 }
 
 img {
