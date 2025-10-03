@@ -5,7 +5,7 @@ export default function getFaIcon(string = '') {
         "Close": "fa-solid fa-xmark",
         "CaretDown": "fa-solid fa-caret-down",
         "Phone": "fa-solid fa-phone",
-        "Bars": "fa-regular fa-bars",
+        "Bars": "fa-solid fa-bars",
     };
 
     return get(icons, string, '');

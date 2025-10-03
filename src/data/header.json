@@ -22,6 +22,10 @@
             "label": "Pages",
             "sub_menu": [
                 {
+                    "label": "Events",
+                    "url": "/pages/events"
+                },
+                {
                     "label": "Team",
                     "url": "/pages/team"
                 }

@@ -1,8 +1,4 @@
-.header {
-    color: var(--white);
-}
-
-.container {
+.content {
     height: 100px;
     display: flex;
     align-items: center;
@@ -10,140 +6,52 @@
 
 .darkLogo,
 .lightLogo {
-    width: 150px;
+    max-width: 150px;
+    margin-right: auto;
 }
 
-.darkLogo {
-    display: none;
-}
-
-.contactLinkWrap {
+.callUsTodayButton {
     display: flex;
     align-items: center;
-    gap: 4px;
-    margin-left: 30px;
+    margin-left: 16px;
 }
 
-.contactLinkWrap .icon {
+.callUsTodayButton .icon {
     font-size: 30px;
     color: var(--primary);
 }
 
-.contactLinkWrap .text p {
-    color: var(--primary);
-    font-size: 14px;
+.callUsTodayButton .label {
     font-family: var(--cursive-font);
+    font-size: 14px;
+    color: var(--primary);
 }
 
-.contactLinkWrap .text a {
+.callUsTodayButton .number {
+    padding-top: 4px;
+    font-family: var(--primary-font);
     font-size: 18px;
 }
 
-.navigation {
-    margin-left: auto;
-}
-
-.menuList {
-    display: flex;
-    align-items: center;
-}
-
-.menuItem {
-    padding: 8px 10px;
-    position: relative;
-}
-
-.menuItem i {
-    color: var(--primary);
-}
-
-.subMenuList {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    transform: translateY(125%);
-    bottom: 0;
-    background-color: var(--white);
-    border-radius: 12px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    box-shadow: 0 16px 50px #00000070;
-    min-width: 240px;
-    z-index: 1;
-    transition: all .3s;
-}
-
-.menuItem:hover .subMenuList {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(100%);
-}
-
-.subMenuList li + li {
-    padding-top: 16px;
-}
-
-.navLink {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.menuList .active,
-.subNavLink:hover,
-.navLink:hover {
-    color: var(--primary);
-}
-
-.subNavLink {
-    color: var(--secondary);
-    min-width: 100px;
-}
-
-.subNavLink:hover {
-    transform: translateX(10px);
+.menu {
+    margin-left: 16px;
+    padding: 8px;
+    display: none;
 }
 
 @media (max-width: 992px) {
-    .contactLinkWrap {
+    .darkLogo,
+    .lightLogo {
+        width: 130px;
+    }
+
+    .menu {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 576px) {
+    .callUsTodayButton {
         display: none;
-    }
-
-    .container {
-        flex-wrap: wrap;
-    }
-
-    .navigation {
-        width: 100%;
-    }
-
-    .menuList {
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        padding: 20px;
-        background: var(--white);
-    }
-
-    .menuList .menuItem .subMenuList {
-        box-shadow: none;
-        padding: 16px 0 0 16px;
-        position: relative;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        display: none;
-    }
-    
-    .menuList .menuItem .subMenuList.open {
-        display: block;
-    }
-
-    .navLink {
-        color: var(--secondary);
     }
 }

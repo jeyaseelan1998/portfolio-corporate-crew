@@ -1,15 +1,16 @@
 :root {
+  --primary: #dc2751;
+  --secondary: #1b1b1b;
+  --white: #fff;
+  --black: #000;
+  --grey: #999999;
+  --light-grey: #727272;
+
   --default-text: #ccc;
   --body-bg: #101010;
   --primary-font: "Poppins", "san serif";
   --secondary-font: "Hind Madurai", "san serif";
   --cursive-font: "Architects Daughter", cursive;
-
-  --white: #fff;
-  --grey: #999999;
-  --primary: #dc2751;
-  --secondary: #1b1b1b;
-  --light-grey: #727272;
 }
 
 * {
@@ -42,16 +43,12 @@ button {
   background-color: transparent;
   transition: all 0.25s;
   display: inline-block;
+  color: var(--default-text);
+  font-size: 16px;
 }
 
 a {
   text-decoration: none;
-}
-
-a,
-button {
-  color: var(--default-text);
-  font-size: 16px;
 }
 
 img {

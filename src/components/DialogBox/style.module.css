@@ -1,0 +1,188 @@
+.dialogBoxOverlay {
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    overflow: auto;
+    display: flex;
+}
+
+.modal {
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.dialogOpen {
+    opacity: 1;
+}
+
+.dialogRemove {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.dialogBox {
+    transform: translateY(100px);
+    transition: transform 0.6s;
+}
+
+.dialogCenter .dialogBox {
+    width: 100%;
+    margin: auto;
+}
+
+.dialogCenter.dialogOpen .dialogBox {
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.dialogMenu.dialogRemove,
+.dialogCenter.dialogRemove {
+    transition: opacity 0.3s 0.3s ease-out;
+}
+
+.dialogMenu .dialogBox {
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    flex: 1;
+}
+
+.dialogMenu.dialogOpen .dialogBox {
+    transform: translateX(0);
+    transition-delay: 0.1s;
+}
+
+.dialogMenu.dialogRemove .dialogBox {
+    transform: translateX(-100%);
+}
+
+.dialogPosition {
+    height: auto;
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    position: relative;
+}
+
+.dialogHeader {
+    text-align: center;
+    position: relative;
+    padding: 15px 30px;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--secondaryColor);
+}
+
+.dialogTitle {
+    color: var(--primaryColor);
+}
+
+.dialogClose {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black);
+    font-size: 24px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.dialogClose:hover {
+    color: var(--primaryColor);
+}
+
+.dialogTop {
+    overflow: auto;
+    height: auto;
+    bottom: 0;
+}
+
+.dialogTop .dialogBox {
+    width: auto;
+    margin: -30px;
+}
+
+.dialogTop .dialogPosition {
+    max-width: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.dialogTop .dialogContent {
+    padding: 0;
+    overflow: visible;
+    max-height: none;
+}
+
+.dialogTop .dialogHeader {
+    display: none;
+}
+
+.dialogFullscreen {
+    overflow: auto;
+}
+
+.dialogButtons {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondaryColor);
+}
+
+.dialogButtons>* {
+    width: 100%;
+}
+
+.dialogContent {
+    padding: 30px;
+    border: 1px solid var(--inputBorder);
+    background: var(--notStrated);
+}
+
+/* Dialog Conent Css End */
+@media (max-width: 580px) {
+    .dialogBoxOverlay {
+        padding: 15px;
+    }
+
+    .dialogTop .dialogBox {
+        margin: -15px;
+    }
+
+    .dialogButtons {
+        text-align: center;
+    }
+
+    .dialogButtons>* {
+        display: block;
+        padding-top: 15px;
+    }
+
+    .dialogButtons.full button,
+    .dialogButtons.full a {
+        width: 100%;
+    }
+
+    .btnWrap>div {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:480px) {
+
+    .bordereauxButton,
+    .passwordButton,
+    .deactivateButton {
+        flex-direction: column;
+    }
+}

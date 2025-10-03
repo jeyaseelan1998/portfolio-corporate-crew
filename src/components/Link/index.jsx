@@ -10,15 +10,23 @@ const Link = (props) => {
     const isMailTo = startsWith(href, "mailto:");
 
     if (isMailTo || isTelephone) {
-        return <a href={href} className={className} ariaLabel={ariaLabel} target={target} rel='noreferrer noopener'>{children}</a>
+        return (
+            <a href={href} className={className} aria-label={ariaLabel} target={target} rel='noreferrer noopener'>
+                {children}
+            </a>
+        )
     }
 
     if (href) {
-        return <Anchor to={href} className={className} ariaLabel={ariaLabel} target={target} rel='noreferrer noopener'>{children}</Anchor>
+        return (
+            <Anchor to={href} className={className} aria-label={ariaLabel} target={target} rel='noreferrer noopener'>
+                {children}
+            </Anchor>
+        )
     }
 
     return (
-        <button onClick={onClick} type={type} className={className} ariaLabel={ariaLabel} disabled={disabled}>
+        <button onClick={onClick} type={type} className={className} aria-label={ariaLabel} disabled={disabled}>
             {children}
         </button>
     )
