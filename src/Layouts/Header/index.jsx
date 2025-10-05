@@ -22,15 +22,23 @@ const Header = () => {
             <div className={style.icon}>
               <i className={getFaIcon("Phone")}></i>
             </div>
-            <div className={style.contactDetails}>
-              <p className={style.label}>Call Ut Today</p>
+            <div>
+              <p className={style.label}>Call Us Today</p>
               <p className={style.number}>800 123 4567</p>
             </div>
           </Link>
 
           <Link className={style.menu} onClick={() => setIsOpen(prev => !prev)}>
-            <i className={getFaIcon("Bars")}></i>
-            {isOpen.toString()}
+            {
+              isOpen && (
+                <i className={getFaIcon("Close")}></i>
+              )
+            }
+            {
+              !isOpen && (
+                <i className={getFaIcon("Bars")}></i>
+              )
+            }
           </Link>
         </div>
       </Center>
