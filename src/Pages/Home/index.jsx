@@ -1,10 +1,17 @@
 import React from 'react';
+import { MetaTag } from '../../components';
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <>
+      <MetaTag
+        title="Corporate Crew | Home"
+        description="Corporate Crew | Home"
+      />
+      <div>
+        Home
+      </div>
+    </>
   )
 }
 

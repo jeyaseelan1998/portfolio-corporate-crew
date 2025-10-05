@@ -23,7 +23,7 @@ const GuestLayout = () => {
 
     return (
         <>
-            <Header />
+            <Header winWidth={dimensions.winWidth} />
             <Outlet context={{ winHeight: dimensions.winHeight, winWidth: dimensions.winWidth }} />
         </>
     )

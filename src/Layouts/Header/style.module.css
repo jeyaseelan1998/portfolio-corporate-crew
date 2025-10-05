@@ -13,7 +13,7 @@
 .callUsTodayButton {
     display: flex;
     align-items: center;
-    margin-left: 16px;
+    margin-left: 32px;
 }
 
 .callUsTodayButton .icon {

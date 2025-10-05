@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-import { BackGround, Center, Link } from "../../components";
 import { LogoLight } from "../../helpers/Images";
+import { BackGround, Center, Link } from "../../components";
+import MenuItems from './MenuItems';
+import getFaIcon from '../../helpers/icons';
+import HEADER_DATA from "../../data/header.json";
 
 import style from "./style.module.css";
-import getFaIcon from '../../helpers/icons';
 
-const Header = () => {
+const Header = ({ winWidth }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +19,11 @@ const Header = () => {
           <div className={style.lightLogo}>
             <BackGround src={LogoLight} normalImage />
           </div>
-
+          {
+            winWidth > 992 && (
+              <MenuItems items={HEADER_DATA.menu_links} />
+            )
+          }
           <Link className={style.callUsTodayButton} href="tel:8001234567">
             <div className={style.icon}>
               <i className={getFaIcon("Phone")}></i>
@@ -27,7 +33,6 @@ const Header = () => {
               <p className={style.number}>800 123 4567</p>
             </div>
           </Link>
-
           <Link className={style.menu} onClick={() => setIsOpen(prev => !prev)}>
             {
               isOpen && (

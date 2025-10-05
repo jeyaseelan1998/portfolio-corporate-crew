@@ -1,0 +1,62 @@
+.menuList {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menuItem {
+    position: relative;
+}
+
+.menuLink {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menuLink .icon,
+.menuLink:hover,
+.subMenuLink:hover,
+.menuLink.inView,
+.subMenuLink.inView {
+    color: var(--primary);
+}
+
+
+.menuLink .icon {
+    transition: transform .4s;
+}
+
+.menuItem.active .icon {
+    transform: rotate(180deg);
+}
+
+.subMenuList {
+    min-width: 240px;
+    position: absolute;
+    background-color: var(--white);
+    background-color: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .4s, transform .4s;
+}
+
+.menuItem.active .subMenuList {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subMenuLink {
+    width: 100%;
+}
+
+.subMenuLink:hover {
+    transform: translateX(10px);
+}

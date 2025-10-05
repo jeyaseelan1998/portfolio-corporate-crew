@@ -20,7 +20,7 @@
         },
         {
             "label": "Pages",
-            "sub_menu": [
+            "sub_menu_links": [
                 {
                     "label": "Events",
                     "url": "/pages/events"
