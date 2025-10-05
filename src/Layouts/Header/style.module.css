@@ -1,3 +1,7 @@
+.header {
+    position: relative;
+}
+
 .content {
     height: 100px;
     display: flex;

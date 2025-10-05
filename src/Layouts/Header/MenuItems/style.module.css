@@ -27,10 +27,6 @@
     transition: transform .4s;
 }
 
-.menuItem.active .icon {
-    transform: rotate(180deg);
-}
-
 .subMenuList {
     min-width: 240px;
     position: absolute;
@@ -59,4 +55,63 @@
 
 .subMenuLink:hover {
     transform: translateX(10px);
+}
+
+@media (max-width: 992px) {
+    .menuItemsWrapper {
+        background-color: var(--white);
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        overflow: auto;
+        transition: height .4s;
+    }
+
+    .menuList {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px 0;
+    }
+
+    .subMenuLink,
+    .menuLink {
+        color: var(--secondary);
+    }
+
+    .subMenuListWrapper {
+        height: 0;
+        overflow: hidden;
+        transition: height .4s;
+    }
+
+    .subMenuList {
+        background-color: transparent;
+        position: relative;
+        transform: none;
+        border-left: 2px solid red;
+        border-radius: 0;
+        margin-left: 16px;
+        padding-bottom: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .subMenuLink {
+        position: relative;
+    }
+
+    .subMenuLink::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 16px;
+        background-color: red;
+        top: 50%;
+        left: -20px;
+    }
+
+    .subMenuLink:hover {
+        transform: none;
+    }
 }
