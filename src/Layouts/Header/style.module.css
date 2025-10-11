@@ -27,16 +27,11 @@
 }
 
 .callUsTodayButton .label {
-    font-family: var(--cursive-font);
-    font-size: 14px;
     color: var(--primary);
 }
 
 .callUsTodayButton .number {
     padding-top: 4px;
-    line-height: 1.15   ;
-    font-family: var(--primary-font);
-    font-size: 18px;
 }
 
 .menu {

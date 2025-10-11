@@ -1,6 +1,6 @@
 import $ from "jquery-slim";
 import { get } from 'lodash';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Link } from '../../../components';
@@ -20,7 +20,7 @@ const MenuItems = ({ items = [], isMobileView = false, id, Element = React.Fragm
 
     const onMouseClick = (idx) => {
         if (isMobileView === true) {
-            setActiveMenu(idx);
+            setActiveMenu(prev => prev === idx ? false : idx);
             const wrapper = $(`#subMenuWrapper${idx}`);
             if (wrapper.outerHeight() > 0) {
                 wrapper.css('height', "0px");

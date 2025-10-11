@@ -95,7 +95,7 @@
         background-color: transparent;
         position: relative;
         transform: none;
-        border-left: 2px solid red;
+        border-left: 2px solid var(--primary);
         border-radius: 0;
         margin-left: 16px;
         padding-bottom: 0;
@@ -112,7 +112,7 @@
         position: absolute;
         height: 2px;
         width: 16px;
-        background-color: red;
+        background-color: var(--primary);
         top: 50%;
         left: -20px;
     }

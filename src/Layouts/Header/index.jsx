@@ -9,6 +9,7 @@ import getFaIcon from '../../helpers/icons';
 import HEADER_DATA from "../../data/header.json";
 
 import style from "./style.module.css";
+import Text from "../../components/Text";
 
 const Header = ({ winWidth }) => {
 
@@ -56,8 +57,16 @@ const Header = ({ winWidth }) => {
               <i className={getFaIcon("Phone")}></i>
             </div>
             <div>
-              <p className={style.label}>Call Us Today</p>
-              <p className={style.number}>800 123 4567</p>
+              <div className={style.label}>
+                <Text className='cursive' size='14'>
+                  Call Us Today
+                </Text>
+              </div>
+              <div className={style.number}>
+                <Text className='poppins' size='18'>
+                  800 123 4567
+                </Text>
+              </div>
             </div>
           </Link>
           <Link className={style.menu} onClick={onToggleMenu}>

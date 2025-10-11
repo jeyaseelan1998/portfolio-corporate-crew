@@ -1,0 +1,55 @@
+.text {
+    position: relative;
+    font-family: var(--secondary-font);
+}
+
+.poppins {
+    font-family: var(--primary-font);
+}
+
+.fw900 {
+    font-weight: 900;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.cursive {
+    font-family: var(--cursive-font);
+}
+
+.font14 {
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.font16 {
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.font18 {
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.font20 {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.font24 {
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.font48 {
+    font-size: 48px;
+    line-height: 1.25;
+}
+
+.font75 {
+    font-size: 75px;
+    line-height: 1.25;
+}
