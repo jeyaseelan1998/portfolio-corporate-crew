@@ -4,6 +4,8 @@ Deployed on --> https://corporatecrew.netlify.app/
 
 Deployed from --> https://github.com/jeyaseelan1998/portfolio-corporate-crew.git
 
+Theme used --> https://shthemes.net/demosd/acens/
+
 
 ### Local Development setup
 

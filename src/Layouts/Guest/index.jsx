@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Header from "../Header";
+import Footer from "../Footer";
 
 const GuestLayout = () => {
     const [dimensions, setDimensions] = useState({});
@@ -25,6 +26,7 @@ const GuestLayout = () => {
         <>
             <Header winWidth={dimensions.winWidth} />
             <Outlet context={{ winHeight: dimensions.winHeight, winWidth: dimensions.winWidth }} />
+            <Footer />
         </>
     )
 }
